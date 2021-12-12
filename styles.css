@@ -7,12 +7,13 @@
 	font-family: 'Libre Franklin', sans-serif;
 	text-decoration: none;
 	box-sizing: content-box;
+    font-weight: 200;
 }
 
 .indexBody {
-	background-color: #2e2e2e;
+	background: linear-gradient(to top,#2e2e2e, #1b242e);
 	display: grid;
-	height: 100vh;
+	/* height: 100vh; */
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	grid-template-areas: 
