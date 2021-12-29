@@ -1,0 +1,301 @@
+/* Start General Style */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+  text-decoration: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.indexBody {
+  background-color: #2e2e2e;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "header" "main" "footer";
+}
+
+.sectionMain {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionMain .img img {
+  width: 100%;
+  display: block;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  height: 70px;
+  position: -webkit-sticky;
+  position: sticky;
+  background: #1b242e;
+  z-index: 999;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.containerNav {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerNav .nav__logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containerNav .nav__logo a {
+  color: white;
+  font-size: 20px;
+  margin-right: 20%;
+}
+
+.containerNav .nav__list {
+  width: 100%;
+}
+
+.containerNav .nav__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.containerNav .nav__list ul li a {
+  letter-spacing: 1.41px;
+  font-size: 18px;
+  color: white;
+}
+
+.containerNav .nav__list ul li a:hover {
+  text-decoration: underline;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media queries Iphone X */
+@media (max-width: 375px) {
+  .indexBody {
+    -ms-grid-rows: 28% auto;
+        grid-template-rows: 28% auto;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  header {
+    height: 100%;
+  }
+  .containerNav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    margin-bottom: 2% 0;
+  }
+  .nav__logo a {
+    margin: 5% auto;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav__list ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav__list ul li {
+    margin: 10% 0;
+  }
+}
+
+.footer {
+  background: #000000;
+  padding: 3% 0 2% 0;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+.footer .redes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3%;
+  margin-bottom: 2%;
+}
+
+.footer .redes a img {
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
+  width: 30px;
+  height: 30px;
+}
+
+.footer .redes a img:hover {
+  -webkit-filter: saturate(1);
+          filter: saturate(1);
+}
+
+.footer .copyR {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+  margin: 1% 0 1% 0;
+}
+
+.footer .copyR h6 {
+  margin-top: 1%;
+}
+
+.musicBody {
+  background-color: #121212;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "header" "music" "footer";
+}
+
+.sectionMusic {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: music;
+}
+
+.sectionMusic h2 {
+  font-size: 32px;
+  letter-spacing: 2.15px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  padding: 3% 0;
+}
+
+.iframe__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding-top: 4%;
+  padding-bottom: 5%;
+}
+
+.iframe__container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+}
+
+@media (max-width: 375px) {
+  .musicBody {
+    -ms-grid-rows: 28% auto;
+        grid-template-rows: 28% auto;
+  }
+  .sectionMusic h2 {
+    padding: 10% 0;
+  }
+  .iframe__container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .iframe__container ul li {
+    margin: 15% 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

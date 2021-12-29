@@ -1,0 +1,54 @@
+@import 'variables';
+
+.musicBody {
+    background-color: #121212;
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"header"
+	"music"
+	"footer";
+}
+
+
+.sectionMusic {
+     grid-area: music;
+    h2 {
+        font-size: 32px;
+        letter-spacing: 2.15px;
+        font-weight: 200;
+        color: white;
+        text-align: center;
+        padding: 3% 0;
+    }
+}
+
+.iframe__container {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .musicBody {
+        grid-template-rows: 28% auto;
+    }
+    .sectionMusic h2 {
+        padding: 10% 0;
+    }
+    .iframe__container ul{
+        flex-direction: column;
+        li {
+            margin: 15% 0;
+        }
+    }
+}
