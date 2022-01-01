@@ -1,0 +1,18 @@
+@import 'variablesMaps';
+
+.musicBody {
+	background-color: #121212;
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"header"
+	"music"
+	"footer";
+}
+
+.bioBody {
+    @extend .musicBody;
+    background-color: map-get($fondos, bg-darkgrey );
+}
