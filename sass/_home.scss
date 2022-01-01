@@ -1,7 +1,7 @@
-@import 'variables';
+@import 'variables-maps';
 
 .indexBody {
-    background-color: $bg-grey;
+    background-color: map-get($fondos, $bg-grey);
 	display: grid;
 	height: 100vh;
 	grid-template-columns: 1fr;
