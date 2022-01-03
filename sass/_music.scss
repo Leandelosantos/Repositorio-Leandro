@@ -1,5 +1,14 @@
 @import 'variables';
 
+.head__extend {
+    font-size: 32px;
+    letter-spacing: 2.15px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    padding: 3% 0;
+}
+
 .musicBody {
     background-color: map-get($fondos, bg-darkgrey);
 	display: grid;
@@ -16,12 +25,7 @@
 .sectionMusic {
      grid-area: music;
     h2 {
-        font-size: 32px;
-        letter-spacing: 2.15px;
-        font-weight: 200;
-        color: white;
-        text-align: center;
-        padding: 3% 0;
+      @extend .head__extend;
     }
 }
 
