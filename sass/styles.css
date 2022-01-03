@@ -20,8 +20,6 @@
       grid-template-areas: "header" "main" "footer";
 }
 
-/* Main - Image  */
-
 .sectionMain {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -42,8 +40,6 @@
   width: 100%;
   display: block;
 }
-
-/* NavBar */
 
 header {
   top: 0;
@@ -177,8 +173,6 @@ header {
   }
 }
 
-/* Footer */
-
 .footer {
   background: #000000;
   padding: 3% 0 2% 0;
@@ -234,8 +228,6 @@ header {
 .footer .copyR h6 {
   margin-top: 1%;
 }
-
-/* Music View */
 
 .musicBody {
   background-color: #121212;
@@ -305,7 +297,4 @@ header {
     margin: 15% 0;
   }
 }
-
-
-
 /*# sourceMappingURL=styles.css.map */

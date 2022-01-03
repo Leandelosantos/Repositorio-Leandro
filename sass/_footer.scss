@@ -1,8 +1,7 @@
-@import 'variablesMaps';
-
+@import 'variables';
 
 .footer {
-    background: #000000;
+    background: map-get($fondos, bg-dark);
     padding: 3% 0 2% 0;
 	grid-area: footer;
     .redes {

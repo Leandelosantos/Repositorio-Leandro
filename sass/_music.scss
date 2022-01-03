@@ -1,7 +1,7 @@
-@import 'variablesMaps';
+@import 'variables';
 
 .musicBody {
-    background-color: map-get($fondos, $bg-darkgrey);
+    background-color: map-get($fondos, bg-darkgrey);
 	display: grid;
 	height: 100vh;
 	grid-template-columns: 1fr;
