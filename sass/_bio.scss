@@ -1,0 +1,73 @@
+@import 'variables';
+
+@mixin bioH2 {
+    font-size: 32px;
+	letter-spacing: 2.15px;
+	font-weight: 200;
+	color: white;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.bioBody {
+    background-color: map-get($fondos, bg-darkgrey );
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"header"
+	"bio"
+	"footer";
+}
+
+
+.bio {
+    grid-area: bio;
+    h2 {
+        @include bioH2;
+    }
+    .contentBio {
+        display: flex;
+        align-items: center;
+        margin: 3% 0;
+        .image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-left: 3%;
+        }
+        .textBio {
+            width: 100%;
+            margin-right: 3%;
+            p {
+                text-align: center;
+                color: whitesmoke;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+	
+	.bioBody {
+		grid-template-rows: 28% auto;
+	}
+	.contentBio {
+		flex-direction: column;
+		margin: 3% 0 10% 0;
+	}
+
+	.textBio {
+		width: 375px;
+		margin: 0;
+	}
+	.image {
+		margin: 5% 0;
+	}
+	.image img {
+		width: 360px;
+	}
+	
+}

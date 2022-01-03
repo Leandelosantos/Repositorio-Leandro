@@ -1,0 +1,66 @@
+@import 'variables';
+
+.bodyContact {
+	background-image: url(../img/club.jpeg);
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"header"
+	"form"
+	"footer";
+}
+
+form {
+	grid-area: form;
+	margin-bottom: 3%;
+}
+
+legend {
+    letter-spacing: 2.15px;
+    font-weight: bold;
+    color: #1b242e;
+    text-align: center;
+    padding: 3% 0;
+    text-shadow: 1px 1px white;
+    font-size: 32px;
+}
+
+.formContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    ul {
+        list-style-type: none;
+        li {
+            padding: 10px 0px;
+            color: whitesmoke;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 1px 1px #1b242e;
+            .input__item {
+                display: flex;
+                width: 75%;
+            }
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+
+	.bodyContact {
+		grid-template-rows: 28% auto;
+	}
+
+	legend {
+		padding: 10% 0;
+	}
+
+	.formContainer {
+		margin-bottom: 10%;
+	}
+}
