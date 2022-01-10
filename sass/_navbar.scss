@@ -18,6 +18,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    box-shadow: 0px -6px 20px 0px whitesmoke;
         .nav {
             &__logo {
                 width: 100%;
