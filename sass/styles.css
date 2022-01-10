@@ -8,39 +8,6 @@
           box-sizing: content-box;
 }
 
-.indexBody {
-  background-color: #2e2e2e;
-  display: -ms-grid;
-  display: grid;
-  height: 100vh;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "header" "main" "footer";
-}
-
-.sectionMain {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: main;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.sectionMain .img img {
-  width: 100%;
-  display: block;
-}
-
 /* NavBar */
 header {
   top: 0;
@@ -174,11 +141,176 @@ header {
   }
 }
 
+/* Index */
+.indexBody {
+  background-color: #2e2e2e;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "main" "footer";
+}
+
+.sideBar {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__nav--home {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.container__nav--home .nav__logo--home {
+  width: 25%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4%;
+}
+
+.container__nav--home .nav__logo--home a {
+  color: white;
+  font-size: 20px;
+  margin-right: 20%;
+}
+
+.container__nav--home .nav__list--home {
+  width: 75%;
+  height: 100%;
+  margin-top: 10%;
+}
+
+.container__nav--home .nav__list--home ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 6rem;
+}
+
+.container__nav--home .nav__list--home ul li a {
+  letter-spacing: 14px;
+  font-size: 20px;
+  color: white;
+}
+
+.container__nav--home .nav__list--home ul li a:hover {
+  text-decoration: underline;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media queries Iphone X */
+@media (max-width: 375px) {
+  .indexBody {
+    -ms-grid-rows: 28% auto;
+        grid-template-rows: 28% auto;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  header {
+    height: 100%;
+  }
+  .containerNav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    margin-bottom: 2% 0;
+  }
+  .nav__logo a {
+    margin: 5% auto;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav__list ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav__list ul li {
+    margin: 10% 0;
+  }
+}
+
+.sectionMain {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionMain .videoHome {
+  width: 100%;
+  height: 100%;
+  /* display: block; */
+}
+
 /* Footer */
 .footer {
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1008' height='121' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='2.3' stroke-opacity='0.5'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
-  /* background: map-get($fondos, bg-dark); */
+  background: #000000;
   padding: 3% 0 2% 0;
   -ms-grid-row: 3;
   -ms-grid-column: 1;

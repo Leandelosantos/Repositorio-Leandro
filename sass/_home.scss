@@ -7,18 +7,20 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	grid-template-areas: 
-	"header"
 	"main"
 	"footer";
 }
+
+@import 'navbarHome';
 
 .sectionMain {
     grid-area: main;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-    .img img {
+    .videoHome {
         width: 100%;
-        display: block;
+		height: 100%;
+        /* display: block; */
     }
 }

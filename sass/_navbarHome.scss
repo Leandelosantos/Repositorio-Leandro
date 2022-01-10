@@ -1,0 +1,96 @@
+@import 'variables';
+
+.sideBar {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__nav--home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    .nav {
+        &__logo--home {
+            width: 25%;
+            height: 100%;
+	        display: flex;
+	        flex-direction: column;
+            margin-top: 4%;
+        }
+        &__logo--home a {
+            color: white;
+            font-size: 20px;
+            margin-right: 20%;
+        }
+        &__list--home {
+            width: 75%;
+            height: 100%;
+            margin-top: 10%;
+            ul {
+                display: flex;
+                list-style-type: none;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 6rem;
+                li a {
+                    letter-spacing: 14px;
+                    font-size: 20px;
+                    color: white;
+                    &:hover {
+                        text-decoration: underline;
+                        animation-duration: 2s;
+                        animation-name: opacity;
+                        animation-iteration-count: infinite;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media queries Iphone X */
+
+@media (max-width: 375px) {
+    .indexBody {
+        grid-template-rows: 28% auto;
+		align-content: space-between;
+    }
+    header {
+        height: 100%;
+    }
+    .containerNav {
+        flex-flow: column wrap;
+		margin-bottom: 2% 0;
+    }
+        .nav {
+            &__logo a {
+                margin: 5% auto;
+            }
+            &__list {
+                display: flex;
+                justify-content: center;
+                ul {
+                    flex-direction: column;
+                    li {
+                        margin: 10% 0;
+                    }
+                }
+            }   
+        }
+}
