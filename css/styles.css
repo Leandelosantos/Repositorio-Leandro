@@ -89,7 +89,7 @@ header {
 
 /* Media queries Iphone X */
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
 
 /* Mobile barra de navegacion */
 
@@ -314,7 +314,7 @@ h2 {
 	filter: saturate(1);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
 	
 	.mediaBody {
 		grid-template-rows: 28% auto;
@@ -323,7 +323,7 @@ h2 {
 		height: 100%;
 	}
 	.media h2 {
-		margin: 0 0 6%;
+		padding: 10% 0;
 		}
 	.galleryContainer1 {
 		grid-template-columns: none;

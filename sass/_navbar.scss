@@ -19,38 +19,38 @@ header {
     flex-flow: row nowrap;
     align-items: center;
     box-shadow: 0px -6px 20px 0px whitesmoke;
-        .nav {
-            &__logo {
-                width: 100%;
-	            display: flex;
-	            justify-content: center;
-            }
-            &__logo a {
-                color: white;
-                font-size: 20px;
-                margin-right: 20%;
-            }
-            &__list {
-                width: 100%;
-                ul {
-                    display: flex;
-                    list-style-type: none;
-                    justify-content: space-evenly;
-                    li a {
-                        letter-spacing: 1.41px;
-                        font-size: 18px;
-                        color: white;
-                        &:hover {
-                            text-decoration: underline;
-                            animation-duration: 2s;
-                            animation-name: opacity;
-                            animation-iteration-count: infinite;
-                        }
+    .nav {
+        &__logo {
+            width: 100%;
+	        display: flex;
+	        justify-content: center;
+        }
+        &__logo a {
+            color: white;
+            font-size: 20px;
+            margin-right: 20%;
+        }
+        &__list {
+            width: 100%;
+            ul {
+                display: flex;
+                list-style-type: none;
+                justify-content: space-evenly;
+                li a {
+                    letter-spacing: 1.41px;
+                    font-size: 18px;
+                    color: white;
+                    &:hover {
+                        text-decoration: underline;
+                        animation-duration: 2s;
+                        animation-name: opacity;
+                        animation-iteration-count: infinite;
                     }
                 }
             }
-
         }
+
+    }
 }
 
 @keyframes opacity {
@@ -62,33 +62,33 @@ header {
     }
 }
 
-/* Media queries Iphone X */
+/* Media queries Iphone XR */
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
     .indexBody {
         grid-template-rows: 28% auto;
 		align-content: space-between;
-    }
-    header {
-        height: 100%;
-    }
-    .containerNav {
-        flex-flow: column wrap;
-		margin-bottom: 2% 0;
-    }
-        .nav {
-            &__logo a {
-                margin: 5% auto;
-            }
-            &__list {
-                display: flex;
-                justify-content: center;
-                ul {
-                    flex-direction: column;
-                    li {
-                        margin: 10% 0;
+        header {
+            height: 100%;
+            .containerNav {
+                flex-flow: column wrap;
+                margin-bottom: 2% 0;
+                .nav {
+                    &__logo a {
+                        margin: 5% auto;
+                    }
+                    &__list {
+                        display: flex;
+                        justify-content: center;
+                        ul {
+                            flex-direction: column;
+                            li {
+                                margin: 10% 0;
+                            }
+                        }
                     }
                 }
             }   
         }
+    }
 }

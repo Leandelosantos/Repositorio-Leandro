@@ -39,7 +39,7 @@
         }
         .textBio {
             width: 100%;
-            margin-right: 3%;
+            margin: 0 2%;
             p {
                 text-align: center;
                 color: whitesmoke;
@@ -49,25 +49,50 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
 	
-	.bioBody {
-		grid-template-rows: 28% auto;
-	}
-	.contentBio {
-		flex-direction: column;
-		margin: 3% 0 10% 0;
-	}
-
-	.textBio {
-		width: 375px;
-		margin: 0;
-	}
-	.image {
-		margin: 5% 0;
-	}
-	.image img {
-		width: 360px;
-	}
+    .bioBody {
+        grid-template-rows: 28% auto;
+        header {
+            height: 100%;
+            .containerNav {
+                flex-flow: column wrap;
+                margin-bottom: 2% 0;
+                .nav {
+                    &__logo a {
+                        margin: 5% auto;
+                    }
+                    &__list {
+                        display: flex;
+                        justify-content: center;
+                        ul {
+                            flex-direction: column;
+                            li {
+                                margin: 10% 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+           
 	
+	
+	
+		.contentBio {
+			flex-direction: column;
+			margin: 3% 0 10% 0;
+			.image {
+				margin: 5% 0;
+				img {
+					width: 360px;
+				}
+			}
+			.textBio {
+				width: 375px;
+				margin: 0% 1%;
+			}
+			
+		}
+	}
 }

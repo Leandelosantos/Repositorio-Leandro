@@ -50,17 +50,38 @@ legend {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
 
-	.bodyContact {
-		grid-template-rows: 28% auto;
-	}
-
-	legend {
-		padding: 10% 0;
-	}
-
-	.formContainer {
-		margin-bottom: 10%;
-	}
+    .bodyContact {
+        grid-template-rows: 28% auto;
+        background-position: 36% 285%;
+        header {
+            height: 100%;
+            .containerNav {
+                flex-flow: column wrap;
+                margin-bottom: 2% 0;
+                .nav {
+                    &__logo a {
+                        margin: 5% auto;
+                    }
+                    &__list {
+                        display: flex;
+                        justify-content: center;
+                        ul {
+                            flex-direction: column;
+                            li {
+                                margin: 10% 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        legend {
+            padding: 10% 0;
+        }
+        .formContainer {
+            margin-bottom: 10%;
+        }
+    }
 }

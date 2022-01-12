@@ -42,17 +42,47 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
     .musicBody {
         grid-template-rows: 28% auto;
-    }
-    .sectionMusic h2 {
-        padding: 10% 0;
-    }
-    .iframe__container ul{
-        flex-direction: column;
-        li {
-            margin: 15% 0;
+        header {
+            height: 100%;
+            .containerNav {
+                flex-flow: column wrap;
+                margin-bottom: 2% 0;
+                .nav {
+                    &__logo a {
+                        margin: 5% auto;
+                    }
+                    &__list {
+                        display: flex;
+                        justify-content: center;
+                        ul {
+                            flex-direction: column;
+                            li {
+                                margin: 10% 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
-    }
+        
+        .sectionMusic {
+            h2 {
+                padding: 10% 0;
+            }
+            .iframe__container {
+                ul {
+                    flex-direction: column;
+                    li {
+                        margin: 15% 5%;
+                    }
+                    
+                }
+            }
+        }
+
+        
+    }       
 }
