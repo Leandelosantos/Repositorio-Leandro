@@ -18,9 +18,20 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-    .videoHome {
-        width: 100%;
-		height: 100%;
-        /* display: block; */
-    }
+}
+
+.videoHome {
+    width: 100%;
+	height: 100%;
+    /* display: block; */
+}
+
+@media (max-width: 414px) {
+	.sectionMain {
+		background: url(../img/fondo__home--responsive2.jpeg);
+		background-size: cover;
+		.videoHome {
+			display: none;
+		}
+	}
 }

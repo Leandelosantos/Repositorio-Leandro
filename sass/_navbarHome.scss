@@ -17,16 +17,11 @@
     flex-flow: row nowrap;
     .nav {
         &__logo--home {
-            width: 25%;
+            width: 28%;
             height: 20%;
 	        display: flex;
 	        flex-direction: column;
             margin-top: 4%;
-        }
-        &__logo--home a {
-            color: white;
-            font-size: 20px;
-            margin-right: 20%;
         }
         &__list--home {
             width: 75%;
@@ -71,29 +66,22 @@
 
 @media (max-width: 414px) {
     .indexBody {
-        grid-template-rows: 28% auto;
-		align-content: space-between;
-        header {
-            height: 100%;
-        }
-        .containerNav {
-            flex-flow: column wrap;
-            margin-bottom: 2% 0;
-        }
-        .nav {
-            &__logo a {
-                margin: 5% auto;
-            }
-            &__list {
-                display: flex;
-                justify-content: center;
-                ul {
-                    flex-direction: column;
-                    li {
-                        margin: 10% 0;
+        grid-template-rows: 89% auto;
+        .container__nav--home {
+            .nav {
+                &__logo--home {
+                    width: 63%;
+                }
+                &__list--home {
+                    width: 37%;
+                    height: 45%;
+                    margin-top: 75%;
+                    ul li a {
+                        text-shadow: 3px 3px 1px black;
                     }
                 }
-            }   
+            }
+
         }
     }
 }

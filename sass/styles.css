@@ -184,7 +184,7 @@ header {
 }
 
 .container__nav--home .nav__logo--home {
-  width: 25%;
+  width: 28%;
   height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,12 +194,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 4%;
-}
-
-.container__nav--home .nav__logo--home a {
-  color: white;
-  font-size: 20px;
-  margin-right: 20%;
 }
 
 .container__nav--home .nav__list--home {
@@ -258,40 +252,19 @@ header {
 /* Media queries Iphone XR */
 @media (max-width: 414px) {
   .indexBody {
-    -ms-grid-rows: 28% auto;
-        grid-template-rows: 28% auto;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+    -ms-grid-rows: 89% auto;
+        grid-template-rows: 89% auto;
   }
-  .indexBody header {
-    height: 100%;
+  .indexBody .container__nav--home .nav__logo--home {
+    width: 63%;
   }
-  .indexBody .containerNav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    margin-bottom: 2% 0;
+  .indexBody .container__nav--home .nav__list--home {
+    width: 37%;
+    height: 45%;
+    margin-top: 75%;
   }
-  .indexBody .nav__logo a {
-    margin: 5% auto;
-  }
-  .indexBody .nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .indexBody .nav__list ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .indexBody .nav__list ul li {
-    margin: 10% 0;
+  .indexBody .container__nav--home .nav__list--home ul li a {
+    text-shadow: 3px 3px 1px black;
   }
 }
 
@@ -311,10 +284,20 @@ header {
           justify-content: center;
 }
 
-.sectionMain .videoHome {
+.videoHome {
   width: 100%;
   height: 100%;
   /* display: block; */
+}
+
+@media (max-width: 414px) {
+  .sectionMain {
+    background: url(../img/fondo__home--responsive2.jpeg);
+    background-size: cover;
+  }
+  .sectionMain .videoHome {
+    display: none;
+  }
 }
 
 /* Footer */
@@ -521,6 +504,11 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: 3%;
+}
+
+.bio .contentBio .image img {
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
 }
 
 .bio .contentBio .textBio {
