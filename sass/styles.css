@@ -51,8 +51,10 @@ header {
 
 .containerNav .nav__logo a {
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   margin-right: 20%;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px black;
 }
 
 .containerNav .nav__list {
@@ -353,8 +355,13 @@ header {
   margin: 1% 0 1% 0;
 }
 
+.footer .copyR h5 {
+  font-weight: inherit;
+}
+
 .footer .copyR h6 {
   margin-top: 1%;
+  font-weight: inherit;
 }
 
 /* Music View */
@@ -632,7 +639,7 @@ legend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 75%;
+  width: 100%;
 }
 
 .formContainer ul textarea {

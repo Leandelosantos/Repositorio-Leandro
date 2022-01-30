@@ -53,8 +53,10 @@ header {
 }
 .nav__logo a {
 	color: white;
-	font-size: 20px;
+	font-size: 22px;
 	margin-right: 20%;
+	font-weight: 600;
+	text-shadow: 2px 2px 5px black;
 }
 
 .nav__list {
@@ -171,8 +173,12 @@ header {
 	color: whitesmoke;
 	margin: 1% 0 1% 0;
 }
+.copyR h5 {
+	font-weight: inherit;
+}
 .copyR h6 {
 	margin-top: 1%;
+	font-weight: inherit;
 }
 
 

@@ -27,8 +27,12 @@
         align-items: center;
         color: whitesmoke;
         margin: 1% 0 1% 0;
+        h5 {
+            font-weight: inherit;
+        }
         h6 {
             margin-top: 1%;
+            font-weight: inherit;
         }
     }
 }
