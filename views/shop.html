@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Leandro De Los Santos, Dj, Electronica"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Music is the Answer, this is my Religion">
+    <link rel="icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../sass/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Shop - Leandro De Los Santos</title>
+</head>
+
+<body class="musicBody">
+
+    <!-- Barra de navegacion -->
+
+    <header>
+        <div class="containerNav">
+            <div class="nav__logo">
+                <a href="../index.html">Leandro de los Santos</a>
+            </div>
+            <nav class="nav__list">
+                <ul>
+                    <li><a href="../views/music.html">music</a></li>
+                    <li><a href="../views/media.html">media</a></li>
+                    <li><a href="../views/bio.html">bio</a></li>
+                    <li><a href="../views/shop.html">shop</a></li>                       
+                    <li><a href="../views/contact.html">contact</a></li>                       
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    
+    <section class="sectionShop">
+        <article>
+            <div>
+                <h2 class="animate__animated animate__fadeInDown">Shop</h2>
+                    <form action="https://submit-form.com/your-form-id" class="formPago" id="formulario">
+                        <legend class="formLegend">Completa la informacion de la orden</legend>                
+                            <div class="pagoContainer">
+                                <ul>
+                                    <li><label for="nombre">Nombre:</label><input class="input__item" type="text" name="nombre" required id="inputNombre"></li>
+                                    <li><label for="apellido">Apellido:</label><input class="input__item" type="text" name="apellido" required id="inputApellido"></li>
+                                    <li><label for="email">E-mail:</label><input class="input__item" type="email" name="email" required id="inputEmail"></li>
+                                    <li><label for="entradas">Cantidad de entradas</label>
+                                        <select class="input__item" id="inputEntradas">
+                                            <option value="">Cantidad de entradas...</option>
+                                            <option value="1 = $5000">1 - $5000</option>
+                                            <option value="2 = $10000">2 - $10000</option>
+                                        </select></li>
+                                    <li><div class="precioFinal" id="precioFinal"></div></li>
+                                    <li><label for="pago">Pago</label>
+                                        <select class="input__item" name="pago" id="selectPago">
+                                            <option value="Tarjeta de Credito">Tarjeta de credito</option>
+                                            <option value="Mercado Pago" selected>Mercado Pago</option>
+                                            <option value="Transferencia">Transferencia Bancaria</option>
+                                        </select></li>
+                                    <!-- <li id="cuadroTarjeta"></li> -->    
+                                    <li>Acepta terminos y condiciones<input type="checkbox" name="acepta" value="1" required></li>
+                                    <li><input type="submit" value="Enviar">
+                                        <input type="reset" value="Limpiar formulario"></li>
+                                </ul>
+                            </div>
+                            <div class="pago_ok--container" id="pagoRealizado">
+                                <!-- <button type="submit" id="btnComprar"></button> -->
+                                </div> 
+                    </form>    
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="redes">
+            <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram_logo.png" alt="instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="../img/facebook_logo.png" alt="facebook"></a>
+            <a href="https://soundcloud.com/leandrodelossantos" target="_blank"><img src="../img/soundcloud_logo.png" alt="soundcloud"></a>
+        </div>
+        <div class="copyR">
+            <h5 class="copyright">&copy; Leandro De Los Santos 2021</h5>
+            <h6>Built By Coder</h6>
+        </div>    
+
+        
+    </footer>     
+
+
+    <script src="../JavaScript/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('18iF4JcohxxOSFbBj')
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

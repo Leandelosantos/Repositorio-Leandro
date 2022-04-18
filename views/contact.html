@@ -32,6 +32,7 @@
                     <li><a href="../views/music.html">music</a></li>
                     <li><a href="../views/media.html">media</a></li>
                     <li><a href="../views/bio.html">bio</a></li>
+                    <li><a href="../views/shop.html">shop</a></li>
                     <li><a href="../views/contact.html">contact</a></li>                       
                 </ul>
             </nav>
@@ -42,15 +43,15 @@
 
     <section>
         <article>
-            <form>
+            <form id="formContacto">
                 <legend class="animate__animated animate__fadeInDown">Contact</legend>
                     <div class="formContainer animate__animated animate__backInUp"> 
                         <ul> 
-                            <li><label for="nombre">Nombre:</label><input class="input__item" type="text" name="nombre" required></li>
-                            <li><label for="apellido">Apellido:</label><input class="input__item" type="text" name="apellido" required></li>
-                            <li><label for="telefono">Teléfono:</label><input class="input__item" type="number" name="telefono"></li>                               
+                            <li><label for="nombre">Nombre:</label><input class="input__item" type="text" name="nombre" id="idNombre" required></li>
+                            <li><label for="apellido">Apellido:</label><input class="input__item" type="text" name="apellido" id="idApellido" required></li>
+                            <li><label for="telefono">Teléfono:</label><input class="input__item" type="number" name="telefono" id="idTelefono"></li>                               
                             <li><label for="país">País</label>
-                                <select class="input__item" name="pais">
+                                <select class="input__item" name="pais" id="idPais">
                                     <option value="AF">Afganistán</option>
                                     <option value="AL">Albania</option>
                                     <option value="DE">Alemania</option>
@@ -286,15 +287,15 @@
                                     <option value="ZM">Zambia</option>
                                     <option value="ZW">Zimbabue</option>
                                 </select></li>
-                            <li><label for="email">E-mail:</label><input class="input__item" type="email" name="email" required></li>
-                            <li><textarea placeholder="Deje su comentario aqui" cols="30" rows="10" required></textarea></li>
+                            <li><label for="email">E-mail:</label><input class="input__item" type="email" name="email" id="idEmail" required></li>
+                            <li><textarea placeholder="Deje su comentario aqui" cols="30" rows="10" name="textareaContact" id="idTextarea" required></textarea></li>
                             <li>Acepta terminos y condiciones<input type="checkbox" name="acepta" value="1"></li>
                                 
                             <li><input type="submit" value="Enviar">
                                 <input type="reset" value="Limpiar formulario"></li>
                         </ul> 
                     </div>
-            </form>
+            </form> 
         </article>
     </section>
 
@@ -312,8 +313,8 @@
         </div>    
     </footer>
 
-
-
+    <script src="../JavaScript/scriptContact.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 </html>
