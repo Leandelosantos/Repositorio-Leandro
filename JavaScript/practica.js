@@ -303,3 +303,24 @@ O tambien puede ser: localStorage.setItem("producto1", JSON.stringify(producto1)
             alert(JSON.stringify(err));
         });
     }); */
+
+
+/*     btnComprar.addEventListener("click", (e) => {
+        e.preventDefault();
+        fetch("https://submit-form.com/your-form-id", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              message: "Hello, Usuario",
+            }),
+          })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.error(error);
+            });
+    }); */

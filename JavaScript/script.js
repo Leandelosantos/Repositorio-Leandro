@@ -85,42 +85,20 @@ miFormulario.addEventListener("submit", (e) => {
                     <li><p> ${formulario.selectPago.value} </p></li>
                     <li><p>Cantidad de entradas y Total: ${formulario.inputEntradas.value} </p></li>
                 </ul>
-            <input type="submit" class="btnComprar" id="btnComprar" value="Comprar">
+            <input type="button" class="btnComprar" id="btnComprar" value="Comprar">
         </div>`;
         
         
     const btnComprar = document.getElementById("btnComprar");
     
-        
     btnComprar.addEventListener("click", (e) => {
-        e.preventDefault();
-        fetch("https://submit-form.com/your-form-id", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({
-              message: "Hello, Usuario",
-            }),
-          })
-            .then(function (response) {
-              console.log(response);
-            })
-            .catch(function (error) {
-              console.error(error);
-            });
+        swal("Muchas gracias por tu compra!", "", "success");
+
+        setTimeout(() => {
+            location.reload()
+        }, 3000)
     });
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+     
 });
     
     
