@@ -18,7 +18,7 @@ if (localStorage.getItem("Contactos")) {
     localStorage.setItem("Contactos", JSON.stringify(arrayContactos))
 }
 
-let formContacto = document.getElementById("formContacto");
+const formContacto = document.getElementById("formContacto");
 
 formContacto.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -33,13 +33,37 @@ formContacto.addEventListener("submit", (e) => {
         );
 
     arrayContactos.push(contacto);
-    formContacto.reset();
     localStorage.setItem("Contactos", JSON.stringify(arrayContactos));
-    console.log(arrayContactos)
-    swal("Gracias por tu consulta!", "Tus datos fueron enviados", "success");
 })
 
 
+async function handleSubmit(event) {
+    event.preventDefault();
+    let data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: formContacto.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        swal("Gracias por tu consulta!", "Tus datos fueron enviados", "success");
+        formContacto.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            swal("Ups!", "Hubo un error con el envio de tu formulario", "error")
+          }
+        })
+      }
+    }).catch(error => {
+      swal("Ups!", "Hubo un error con el envio de tu formulario", "error")
+    });
+  }
+  formContacto.addEventListener("submit", handleSubmit)
 
 
 

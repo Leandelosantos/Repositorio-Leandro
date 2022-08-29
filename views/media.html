@@ -19,7 +19,7 @@
     <title>Media - Leandro De Los Santos</title>
 </head>
 
-<body class="mediaBody">
+<body class="mediaBody" id="media">
 
     <!-- Barra de navegacion -->
 
@@ -45,7 +45,12 @@
 
     <section class="media">
         <article>
-            <div>
+            <div class="dark__mode--media">
+                <label class="switch">
+                    <input class="inputMedia" type="checkbox" id="darkMode">
+                    <span class="slider"></span>
+                </label>
+            </div>
                 <h2 class="animate__animated animate__fadeInDown">Media</h2>
             </div>
             <div class="galleryContainer1">
@@ -63,7 +68,7 @@
 
     <!-- Footer -->
 
-    <footer class="footer">
+    <footer class="footer" id="footerMedia">
         <div class="redes">
             <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram_logo.png" alt="instagram"></a>
             <a href="https://www.facebook.com/" target="_blank"><img src="../img/facebook_logo.png" alt="facebook"></a>
@@ -75,7 +80,7 @@
         </div>    
     </footer>    
 
-
+    <script src="../JavaScript/darkModeMedia.js"></script>
 
 
 

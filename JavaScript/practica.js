@@ -249,7 +249,7 @@ localStorage.setItem("producto1", producto1) --> clave: "producto1", valor: la c
 
 /* const producto1 = { id:2, producto: "arroz"}; 
 const enJSON = JSON.stringify(producto1);
-
+ 
 console.log(enJSON); { id:2, producto: "arroz"} --> me da el objeto en string por consola.
 console.log(typeof producto1); object --> me da el tipo de dato.
 console.log(typeof enJSON); string

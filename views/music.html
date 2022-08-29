@@ -18,7 +18,7 @@
     <title>Music - Leandro De Los Santos</title>
 </head>
 
-<body class="musicBody">
+<body class="musicBody" id="musicBody">
 
     <!-- Barra de navegacion -->
 
@@ -43,6 +43,12 @@
     
     <section class="sectionMusic">
         <article>
+            <div class="darkMode">
+                <label class="switch">
+                    <input type="checkbox" id="darkMode">
+                    <span class="slider"></span>
+                </label>
+            </div> 
             <div>
                 <h2 class="animate__animated animate__fadeInDown">Live Sets</h2>
                     <div class="iframe__container animate__animated animate__fadeInLeft">
@@ -52,13 +58,13 @@
                             <li><iframe width="100%" height="200" src="https://www.mixcloud.com/widget/iframe/?feed=%2FLeandrodelosantos%2Fvincent-podcast-no7-lost-mix-of-pocket%2F" frameborder="0" ></iframe></li>
                         </ul>
                     </div> 
-            </div>    
+            </div>
         </article>
     </section>
 
     <!-- Footer -->
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="redes">
             <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram_logo.png" alt="instagram"></a>
             <a href="https://www.facebook.com/" target="_blank"><img src="../img/facebook_logo.png" alt="facebook"></a>
@@ -72,7 +78,7 @@
         
     </footer>     
 
-
+    <script src="../JavaScript/darkMode.js"></script>
 
 </body>
 </html>
